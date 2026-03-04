@@ -55,6 +55,7 @@ function App() {
 
   return (
     <div className="App">
+      <button className="home-btn" onClick={() => window.location.reload()}>Home</button>
       <div className="container">
         <h1>Expense Tracker</h1>
 

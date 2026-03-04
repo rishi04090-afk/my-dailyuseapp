@@ -1,3 +1,25 @@
+/* Home button styles */
+/* Home button styles */
+.home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #43a047;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.home-btn:hover {
+  background: #2e7031;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,44 +27,44 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #e8f5e9;
 }
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
   padding: 20px;
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
 
 h1 {
-  color: #333;
+  color: #1b5e20;
   margin-bottom: 30px;
   text-align: center;
   font-size: 2.5em;
 }
 
 h2 {
-  color: #667eea;
+  color: #388e3c;
 }
 
 h3 {
-  color: #555;
+  color: #388e3c;
   margin-bottom: 15px;
   margin-top: 20px;
 }
 
 /* Form Section */
 .form-section {
-  background: #f9f9f9;
+  background: #f1f8e9;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 25px;
@@ -61,7 +83,7 @@ form {
 
 label {
   font-weight: 600;
-  color: #333;
+  color: #1b5e20;
   margin-bottom: 8px;
   font-size: 0.95em;
 }
@@ -78,26 +100,26 @@ select {
 input:focus,
 select:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #43a047;
+  box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.1);
 }
 
-.btn-add {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+  .btn-add {
+    background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
 
-.btn-add:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
+  .btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 160, 71, 0.4);
+  }
 
 .btn-add:active {
   transform: translateY(0);
@@ -120,8 +142,8 @@ select:focus {
 
 .search-input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #43a047;
+  box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.1);
 }
 
 .filter-buttons {
@@ -142,19 +164,19 @@ select:focus {
 }
 
 .filter-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #43a047;
+  color: #43a047;
 }
 
 .filter-btn.active {
-  background: #667eea;
+  background: #43a047;
   color: white;
-  border-color: #667eea;
+  border-color: #43a047;
 }
 
 /* Summary Section */
 .summary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -211,13 +233,13 @@ select:focus {
 
 .expense-description {
   font-weight: 600;
-  color: #333;
+  color: #1b5e20;
   font-size: 1.05em;
 }
 
 .expense-category {
-  background: #e8eaf6;
-  color: #667eea;
+  background: #c8e6c9;
+  color: #388e3c;
   padding: 4px 12px;
   border-radius: 12px;
   font-size: 0.85em;
@@ -239,7 +261,7 @@ select:focus {
 
 .expense-amount {
   font-weight: 700;
-  color: #764ba2;
+  color: #2e7031;
   font-size: 1.2em;
 }
 
