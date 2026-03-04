@@ -45,6 +45,12 @@ function App() {
     setExpenses(expenses.filter(exp => exp.id !== id));
   };
 
+  const goHome = () => {
+    setFilter('All');
+    setSearch('');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const filteredExpenses = expenses.filter(exp => {
     const matchesCategory = filter === 'All' || exp.category === filter;
     const matchesSearch = exp.description.toLowerCase().includes(search.toLowerCase());
@@ -55,6 +61,7 @@ function App() {
 
   return (
     <div className="App">
+      <button className="home-btn" onClick={goHome}>Home</button>
       <div className="container">
         <h1>Expense Tracker</h1>
 

@@ -14,6 +14,25 @@ body {
   padding: 20px;
 }
 
+.home-btn {
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  background: white;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 1000;
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
