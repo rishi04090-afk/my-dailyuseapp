@@ -7,6 +7,7 @@ function App() {
   const [category, setCategory] = useState('Food');
   const [description, setDescription] = useState('');
   const [filter, setFilter] = useState('All');
+  const [search, setSearch] = useState('');
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -44,9 +45,11 @@ function App() {
     setExpenses(expenses.filter(exp => exp.id !== id));
   };
 
-  const filteredExpenses = filter === 'All' 
-    ? expenses 
-    : expenses.filter(exp => exp.category === filter);
+  const filteredExpenses = expenses.filter(exp => {
+    const matchesCategory = filter === 'All' || exp.category === filter;
+    const matchesSearch = exp.description.toLowerCase().includes(search.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const total = filteredExpenses.reduce((sum, exp) => sum + exp.amount, 0);
 
@@ -89,6 +92,17 @@ function App() {
 
             <button type="submit" className="btn-add">Add Expense</button>
           </form>
+        </div>
+
+        <div className="filter-section">
+          <h3>Search</h3>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search by description..."
+            className="search-input"
+          />
         </div>
 
         <div className="filter-section">
